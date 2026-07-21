@@ -142,6 +142,12 @@ height:70px;
 
 transition:.3s;
 
+width: 90px;
+
+height: 90px;
+
+object-fit: contain;
+
 }
 
 .logo-grid img:hover{
