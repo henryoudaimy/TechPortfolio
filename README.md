@@ -1,6 +1,8 @@
 # Henry Tech Solutions
 
-Professional technology consulting website.
+Professional technology consulting website
+
+https://henryoudaimy.github.io/TechPortfolio/
 
 ## Technologies
 
