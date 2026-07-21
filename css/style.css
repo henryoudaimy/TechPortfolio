@@ -26,22 +26,21 @@ object-fit:cover;
 
 z-index:-2;
 
-opacity:.25;
+opacity:1;
 
 }
 
 nav{
-
-display:flex;
-
-justify-content:space-between;
-
-padding:20px 60px;
-
-background:rgba(0,0,0,.5);
-
-backdrop-filter:blur(8px);
-
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    background:transparent;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:25px 60px;
+    z-index:1000;
 }
 
 nav ul{
