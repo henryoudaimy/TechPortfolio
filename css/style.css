@@ -760,9 +760,9 @@ section>p{
     border:1px solid rgba(255,255,255,.12);
 
     transition:
-        transform .25s ease,
-        border-color .25s ease,
-        box-shadow .25s ease;
+        transform .45s cubic-bezier(.22,1,.36,1),
+        box-shadow .35s,
+        border-color .35s;
 
     transform-style:preserve-3d;
 
@@ -775,27 +775,70 @@ section>p{
 
     position:absolute;
 
-    inset:0;
+    inset:1px;
+
+    border-radius:25px;
 
     background:
 
         radial-gradient(
 
-            circle at var(--x,50%) var(--y,50%),
+            550px circle at var(--x) var(--y),
 
-            rgba(255,255,255,.18),
+            rgba(255,255,255,.20),
 
-            rgba(255,255,255,.05) 28%,
+            rgba(255,255,255,.08) 18%,
 
-            transparent 55%
+            transparent 45%
 
         );
 
     opacity:0;
 
-    transition:opacity .25s;
+    transition:.25s;
 
     pointer-events:none;
+
+}
+
+.tech::after{
+
+    content:"";
+
+    position:absolute;
+
+    top:-140%;
+
+    left:-55%;
+
+    width:55%;
+
+    height:320%;
+
+    background:
+
+        linear-gradient(
+
+            90deg,
+
+            transparent,
+
+            rgba(255,255,255,.18),
+
+            transparent
+
+        );
+
+    transform:rotate(25deg);
+
+    transition:1s ease;
+
+    pointer-events:none;
+
+}
+.tech:hover::after{
+
+    left:150%;
 
 }
 
@@ -839,7 +882,7 @@ section>p{
     object-fit:contain;
 
     transform:
-        translateZ(35px)
+        translateZ(70px)
         scale(calc(var(--logo-scale) * var(--logo-hover)));
 
     transition:
@@ -848,7 +891,126 @@ section>p{
 
     pointer-events:none;
 
-    z-index:2;
+    z-index:3;
+    position:relative;
+
+}
+
+.tech .logoGlow{
+
+    position:absolute;
+
+    width:90px;
+
+    height:90px;
+
+    border-radius:50%;
+
+    background:
+
+        radial-gradient(
+
+            circle,
+
+            rgba(0,212,255,.45),
+
+            transparent 70%
+
+        );
+
+    filter:blur(22px);
+
+    opacity:0;
+
+    transition:.35s;
+
+    pointer-events:none;
+
+}
+
+.tech:hover .logoGlow{
+
+    opacity:1;
+
+    transform:scale(1.4);
+
+}
+
+.tech{
+
+    isolation:isolate;
+
+}
+
+.techBorder{
+
+    position:absolute;
+
+    inset:-1px;
+
+    border-radius:26px;
+
+    padding:1px;
+
+    background:
+
+        linear-gradient(
+
+            90deg,
+
+            #00d4ff,
+
+            #00ffb7,
+
+            #6a7dff,
+
+            #00d4ff
+
+        );
+
+    background-size:300%;
+
+    animation:borderMove 8s linear infinite;
+
+    opacity:0;
+
+    transition:.3s;
+
+    z-index:0;
+
+    mask:
+        linear-gradient(#fff 0 0) content-box,
+        linear-gradient(#fff 0 0);
+
+    -webkit-mask:
+        linear-gradient(#fff 0 0) content-box,
+        linear-gradient(#fff 0 0);
+
+    -webkit-mask-composite:xor;
+
+    mask-composite:exclude;
+
+}
+
+.tech:hover .techBorder{
+
+    opacity:1;
+
+}
+
+@keyframes borderMove{
+
+    from{
+
+        background-position:0%;
+
+    }
+
+    to{
+
+        background-position:300%;
+
+    }
 
 }
 
