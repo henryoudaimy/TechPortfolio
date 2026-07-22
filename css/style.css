@@ -323,19 +323,23 @@ nav a:hover::after{
 
     display:flex;
 
-    justify-content:center;
+    justify-content:flex-start;
 
     align-items:center;
 
+    flex-direction:column;
+
     text-align:center;
 
-    padding:160px 25px 80px;
+    padding:220px 25px 80px;
 
 }
 
 .hero-content{
 
     max-width:1100px;
+
+    margin-top:40px;
 
 }
 
@@ -365,7 +369,7 @@ nav a:hover::after{
 
 .hero h1{
 
-    font-size:clamp(58px,7vw,96px);
+    font-size:clamp(46px,6vw,78px);
 
     line-height:1.05;
 
@@ -1441,8 +1445,8 @@ footer{
 
     position:fixed;
 
-    width:650px;
-    height:650px;
+    width:900px;
+    height:900px;
 
     left:0;
     top:0;
@@ -1454,19 +1458,17 @@ footer{
     background:
     radial-gradient(circle,
 
-    rgba(0,212,255,.16),
+    rgba(0,212,255,.35) 0%,
 
-    rgba(0,212,255,.08),
+    rgba(0,212,255,.15) 35%,
 
-    transparent 72%);
-
+    transparent 70%);
     transform:
     translate(-50%,-50%);
 
     z-index:-1;
 
-    transition:
-    transform .08s linear;
+    transition:none;
 
     mix-blend-mode:screen;
 
