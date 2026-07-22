@@ -373,7 +373,7 @@ nav a:hover::after{
 
     line-height:1.05;
 
-    margin-bottom:35px;
+    margin-bottom:25px;
 
     text-shadow:
 
@@ -391,7 +391,7 @@ nav a:hover::after{
 
     font-size:34px;
 
-    margin-bottom:35px;
+    margin-bottom:25px;
 
 }
 
@@ -1445,33 +1445,26 @@ footer{
 
     position:fixed;
 
-    width:10px;
-    height:10px;
+    width:18px;
+    height:18px;
 
     left:0;
     top:0;
 
-    pointer-events:none;
+    transform:translate(-50%,-50%);
 
     border-radius:50%;
 
-    background:
-    radial-gradient(circle,
+    background:#00d4ff;
 
-    rgba(0,212,255,.80) 0%,
+    box-shadow:
+        0 0 18px #00d4ff,
+        0 0 40px rgba(0,212,255,.8),
+        0 0 70px rgba(0,212,255,.4);
 
-    rgba(0,212,255,.45) 35%,
+    pointer-events:none;
 
-    rgba(0,212,255,.15) 65%,
+    z-index:9998;
 
-    transparent 100%);
-    transform:
-    translate(-50%,-50%);
-
-    z-index:-1;
-
-    transition:none;
-
-    mix-blend-mode:screen;
-
+    opacity:.9;
 }
