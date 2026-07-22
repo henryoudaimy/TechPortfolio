@@ -140,9 +140,9 @@ header{
 
 nav{
 
-    width:min(1500px,95%);
+    width:min(1450px,96%);
 
-    margin:18px auto;
+    margin:12px auto;
 
     display:flex;
 
@@ -150,21 +150,20 @@ nav{
 
     align-items:center;
 
-    padding:18px 35px;
+    padding:10px 24px;
 
-    border-radius:20px;
+    border-radius:18px;
 
-    background:rgba(255,255,255,.05);
+    background:rgba(255,255,255,.04);
 
-    backdrop-filter:blur(20px);
+    backdrop-filter:blur(22px);
+    -webkit-backdrop-filter:blur(22px);
 
-    -webkit-backdrop-filter:blur(20px);
+    border:1px solid rgba(255,255,255,.06);
 
-    border:1px solid rgba(255,255,255,.08);
+    box-shadow:0 8px 30px rgba(0,0,0,.25);
 
-    box-shadow:var(--shadow);
-
-    transition:.4s;
+    transition:.35s;
 
 }
 
@@ -198,9 +197,13 @@ nav.scrolled{
 
 }
 
-.logo-icon{
+.logo-icon img{
 
-    animation:logoFloat 5s ease-in-out infinite;
+    width:38px;
+
+    animation:spin 18s linear infinite;
+
+    filter:drop-shadow(0 0 10px #00d4ff);
 
 }
 
@@ -220,7 +223,7 @@ nav.scrolled{
 
     gap:10px;
 
-    font-size:32px;
+    font-size:24px;
 
     font-weight:800;
 
@@ -254,7 +257,7 @@ nav ul{
 
     display:flex;
 
-    gap:35px;
+    gap:22px;
 
     list-style:none;
 
@@ -265,6 +268,8 @@ nav a{
     color:white;
 
     text-decoration:none;
+
+    font-size:15px;
 
     font-weight:600;
 
@@ -324,7 +329,7 @@ nav a:hover::after{
 
     text-align:center;
 
-    padding:120px 25px 60px;
+    padding:80px 25px 60px;
 
 }
 
@@ -1270,54 +1275,38 @@ footer{
 
 }
 
-@media(max-width:992px){
+@media (max-width: 992px) {
 
     nav{
-
-        flex-direction:column;
-
-        gap:20px;
-
+        width:95%;
+        margin:8px auto;
+        padding:6px 14px;
+        border-radius:14px;
     }
 
-    nav ul{
+    .logo{
+        gap:8px;
+    }
 
-        flex-wrap:wrap;
-
-        justify-content:center;
-
-        gap:20px;
-
+    .logo-icon img{
+        width:24px;
     }
 
     .logo-text{
+        font-size:16px;
+        gap:3px;
+    }
 
-        font-size:28px;
+    nav ul{
+        gap:10px;
+    }
 
+    nav ul li a{
+        font-size:12px;
     }
 
     .hero{
-
-        padding-top:180px;
-
-    }
-
-    .hero h1{
-
-        font-size:56px;
-
-    }
-
-    .hero h2{
-
-        font-size:28px;
-
-    }
-
-    .hero-description{
-
-        font-size:18px;
-
+        padding-top:100px;
     }
 
 }
