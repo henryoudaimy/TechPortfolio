@@ -851,7 +851,7 @@ section>p{
         translate(var(--moveX), var(--moveY))
         rotateX(var(--rotateX))
         rotateY(var(--rotateY));
-
+}
 .tech:hover{
 
     transform:
