@@ -277,6 +277,8 @@ document.querySelectorAll(".tech").forEach(card=>{
 
     card.addEventListener("mouseleave",()=>{
 
+    console.log("mouseleave");
+
     card.style.setProperty("--moveX","0px");
     card.style.setProperty("--moveY","0px");
 
