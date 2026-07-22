@@ -3,24 +3,33 @@
 
 <head>
 
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Henry Tech Solutions</title>
+    <title>Henry Tech Solutions | Enterprise Cloud Infrastructure</title>
 
-<link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style.css">
 
-<script defer src="js/script.js"></script>
+    <script defer src="js/script.js"></script>
 
 </head>
 
 <body>
 
-<video autoplay muted loop id="background-video">
+<!-- ===================== -->
+<!-- Background Video -->
+<!-- ===================== -->
 
-<source src="videos/cloud.mp4" type="video/mp4">
-
+<video autoplay muted loop playsinline id="background-video">
+    <source src="videos/cloud.mp4" type="video/mp4">
 </video>
+
+<div class="overlay"></div>
+<div class="aurora"></div>
+
+<!-- ===================== -->
+<!-- Navigation -->
+<!-- ===================== -->
 
 <header>
 
@@ -56,83 +65,357 @@
 
 </header>
 
+<!-- ===================== -->
+<!-- Hero -->
+<!-- ===================== -->
+
 <section class="hero">
 
-<h1>Cloud Infrastructure Engineering</h1>
+<div class="hero-content">
 
-<h2>Kubernetes • OpenShift • Canonical MAAS • PostgreSQL</h2>
+<p class="hero-tag">
 
-<p>
-
-Designing resilient cloud platforms, Kubernetes clusters,
-OpenShift environments, PostgreSQL HA, GitLab platforms,
-automation and enterprise infrastructure.
+Enterprise Cloud • Kubernetes • OpenShift • MAAS
 
 </p>
 
-<a href="projects.html" class="button">
+<h1>
 
-View Projects
+Building Enterprise Infrastructure
+
+That Never Sleeps
+
+</h1>
+
+<h2>
+
+<span id="typing"></span>
+
+</h2>
+
+<p class="hero-description">
+
+Henry Tech Solutions designs, automates and supports enterprise-grade cloud platforms using Kubernetes, OpenShift, Canonical MAAS, PostgreSQL, GitLab, Terraform, Ansible and modern DevOps practices.
+
+</p>
+
+<div class="hero-buttons">
+
+<a href="projects.html" class="button primary">
+
+Explore Projects
+
+</a>
+
+<a href="contact.html" class="button secondary">
+
+Contact
+
+</a>
+
+</div>
+
+</div>
+
+<div class="scroll-indicator">
+
+↓
+
+</div>
+
+</section>
+
+<!-- ===================== -->
+<!-- Statistics -->
+<!-- ===================== -->
+
+<section class="stats">
+
+<div class="stat-card">
+
+<h2 class="counter" data-target="7">0</h2>
+
+<p>Years Experience</p>
+
+</div>
+
+<div class="stat-card">
+
+<h2 class="counter" data-target="99">0</h2>
+
+<p>Enterprise Availability</p>
+
+</div>
+
+<div class="stat-card">
+
+<h2 class="counter" data-target="100">0</h2>
+
+<p>Infrastructure Automation</p>
+
+</div>
+
+<div class="stat-card">
+
+<h2 class="counter" data-target="24">0</h2>
+
+<p>Hours Monitoring</p>
+
+</div>
+
+</section>
+
+<!-- ===================== -->
+<!-- Technologies -->
+<!-- ===================== -->
+
+<section class="technologies">
+
+<h2>
+
+Technologies & Platforms
+
+</h2>
+
+<p>
+
+Technologies used to build secure, scalable and highly available enterprise platforms.
+
+</p>
+
+<div class="logo-grid">
+
+<div class="tech">
+
+<img src="logos/kubernetes.png" alt="Kubernetes">
+
+<span>Kubernetes</span>
+
+</div>
+
+<div class="tech">
+
+<img src="logos/openshift.png" alt="OpenShift">
+
+<span>OpenShift</span>
+
+</div>
+
+<div class="tech">
+
+<img src="logos/docker.png" alt="Docker">
+
+<span>Docker</span>
+
+</div>
+
+<div class="tech">
+
+<img src="logos/ubuntu.png" alt="Ubuntu">
+
+<span>Ubuntu</span>
+
+</div>
+
+<div class="tech">
+
+<img src="logos/postgresql.png" alt="PostgreSQL">
+
+<span>PostgreSQL</span>
+
+</div>
+
+<div class="tech">
+
+<img src="logos/ceph.png" alt="Ceph">
+
+<span>Ceph</span>
+
+</div>
+
+<div class="tech">
+
+<img src="logos/gitlab.png" alt="GitLab">
+
+<span>GitLab</span>
+
+</div>
+
+<div class="tech">
+
+<img src="logos/terraform.png" alt="Terraform">
+
+<span>Terraform</span>
+
+</div>
+
+<div class="tech">
+
+<img src="logos/ansible.png" alt="Ansible">
+
+<span>Ansible</span>
+
+</div>
+
+<div class="tech">
+
+<img src="logos/prometheus.png" alt="Prometheus">
+
+<span>Prometheus</span>
+
+</div>
+
+<div class="tech">
+
+<img src="logos/grafana.png" alt="Grafana">
+
+<span>Grafana</span>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ===================== -->
+<!-- Services -->
+<!-- ===================== -->
+
+<section class="services">
+
+<h2>
+
+What We Build
+
+</h2>
+
+<div class="cards">
+
+<div class="card">
+
+<h3>Kubernetes Platforms</h3>
+
+<p>
+
+Highly available production Kubernetes clusters built for enterprise workloads.
+
+</p>
+
+</div>
+
+<div class="card">
+
+<h3>OpenShift Solutions</h3>
+
+<p>
+
+Production-ready Red Hat OpenShift environments with integrated CI/CD and GitOps.
+
+</p>
+
+</div>
+
+<div class="card">
+
+<h3>Canonical MAAS</h3>
+
+<p>
+
+Bare-metal provisioning and automated infrastructure at scale.
+
+</p>
+
+</div>
+
+<div class="card">
+
+<h3>PostgreSQL HA</h3>
+
+<p>
+
+Patroni, replication, automatic failover and highly available databases.
+
+</p>
+
+</div>
+
+<div class="card">
+
+<h3>Infrastructure Automation</h3>
+
+<p>
+
+Terraform, Ansible and Infrastructure as Code for repeatable deployments.
+
+</p>
+
+</div>
+
+<div class="card">
+
+<h3>Monitoring & Observability</h3>
+
+<p>
+
+Prometheus, Grafana and alerting for complete platform visibility.
+
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ===================== -->
+<!-- Call To Action -->
+<!-- ===================== -->
+
+<section class="cta">
+
+<h2>
+
+Ready to Modernize Your Infrastructure?
+
+</h2>
+
+<p>
+
+Let's build secure, resilient and scalable cloud platforms together.
+
+</p>
+
+<a href="contact.html" class="button primary">
+
+Let's Talk
 
 </a>
 
 </section>
 
-<section class="technologies">
-
-<h2>Technologies</h2>
-
-<div class="logo-grid">
-
-<img src="logos/kubernetes.png">
-<img src="logos/openshift.svg">
-<img src="logos/docker.svg">
-<img src="logos/ubuntu.svg">
-<img src="logos/postgresql.svg">
-<img src="logos/ceph.svg">
-<img src="logos/gitlab.svg">
-<img src="logos/terraform.svg">
-<img src="logos/ansible.svg">
-<img src="logos/prometheus.svg">
-<img src="logos/grafana.svg">
-
-</div>
-
-</section>
-
-<section class="services-preview">
-
-<h2>What I Build</h2>
-
-<div class="cards">
-
-<div class="card">
-<h3>Kubernetes</h3>
-<p>Highly available production Kubernetes clusters.</p>
-</div>
-
-<div class="card">
-<h3>OpenShift</h3>
-<p>Enterprise OpenShift architecture and deployment.</p>
-</div>
-
-<div class="card">
-<h3>Canonical MAAS</h3>
-<p>Bare metal provisioning at scale.</p>
-</div>
-
-<div class="card">
-<h3>PostgreSQL</h3>
-<p>Patroni, replication and HA deployments.</p>
-</div>
-
-</div>
-
-</section>
+<!-- ===================== -->
+<!-- Footer -->
+<!-- ===================== -->
 
 <footer>
 
+<div class="footer-content">
+
+<h3>Henry Tech Solutions</h3>
+
+<p>
+
+Enterprise Cloud Infrastructure • Kubernetes • OpenShift • DevOps
+
+</p>
+
+<p>
+
 © 2026 Henry Tech Solutions
+
+</p>
+
+</div>
 
 </footer>
 
