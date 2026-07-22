@@ -249,30 +249,35 @@ window.addEventListener("mousemove",(e)=>{
  Interactive Technology Cards
 ****************************************************/
 
-document.querySelectorAll(".tech").forEach(card => {
+document.addEventListener("DOMContentLoaded", () => {
 
-    card.addEventListener("mousemove", e => {
+    document.querySelectorAll(".tech").forEach(card => {
 
-        const rect = card.getBoundingClientRect();
+        card.addEventListener("mousemove", e => {
 
-        const x = e.clientX - rect.left;
-        const y = e.clientY - rect.top;
+            console.log("mousemove");
 
-        const rotateY = ((x / rect.width) - 0.5) * 18;
-        const rotateX = ((0.5 - y / rect.height)) * 18;
+            const rect = card.getBoundingClientRect();
 
-        card.style.setProperty("--x", x + "px");
-        card.style.setProperty("--y", y + "px");
+            const x = e.clientX - rect.left;
+            const y = e.clientY - rect.top;
 
-        card.style.setProperty("--rotateX", rotateX + "deg");
-        card.style.setProperty("--rotateY", rotateY + "deg");
+            const rotateY = ((x / rect.width) - 0.5) * 18;
+            const rotateX = ((0.5 - y / rect.height)) * 18;
 
-    });
+            card.style.setProperty("--x", x + "px");
+            card.style.setProperty("--y", y + "px");
+            card.style.setProperty("--rotateX", rotateX + "deg");
+            card.style.setProperty("--rotateY", rotateY + "deg");
 
-    card.addEventListener("mouseleave", () => {
+        });
 
-        card.style.setProperty("--rotateX","0deg");
-        card.style.setProperty("--rotateY","0deg");
+        card.addEventListener("mouseleave", () => {
+
+            card.style.setProperty("--rotateX", "0deg");
+            card.style.setProperty("--rotateY", "0deg");
+
+        });
 
     });
 
