@@ -258,8 +258,8 @@ document.querySelectorAll(".tech").forEach(card => {
         const x = e.clientX - rect.left;
         const y = e.clientY - rect.top;
 
-        const rotateY = ((x / rect.width) - 0.5) * 12;
-        const rotateX = ((0.5 - y / rect.height)) * 12;
+        const rotateY = ((x / rect.width) - 0.5) * 18;
+        const rotateX = ((0.5 - y / rect.height)) * 18;
 
         card.style.setProperty("--x", x + "px");
         card.style.setProperty("--y", y + "px");
