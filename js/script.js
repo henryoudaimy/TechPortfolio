@@ -133,8 +133,8 @@ counters.forEach(counter=>{
  * Scroll Reveal
  ***************************************************/
 
-const revealElements=document.querySelectorAll(
-".stat-card,.tech,.card,.cta,.technologies,.services"
+const revealElements = document.querySelectorAll(
+".stat-card,.card,.cta,.technologies,.services"
 );
 
 revealElements.forEach(el=>{
@@ -262,8 +262,8 @@ document.addEventListener("DOMContentLoaded", () => {
             const x = e.clientX - rect.left;
             const y = e.clientY - rect.top;
 
-            const rotateY = ((x / rect.width) - 0.5) * 18;
-            const rotateX = ((0.5 - y / rect.height)) * 18;
+            const rotateY = ((x / rect.width) - 0.5) * 28;
+            const rotateX = ((0.5 - y / rect.height)) * 28;
 
             card.style.setProperty("--x", x + "px");
             card.style.setProperty("--y", y + "px");
