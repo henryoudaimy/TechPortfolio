@@ -1443,3 +1443,42 @@ footer{
     }
 
 }
+
+/*=========================================
+  Mouse Spotlight
+=========================================*/
+
+#spotlight{
+
+    position:fixed;
+
+    width:650px;
+    height:650px;
+
+    left:0;
+    top:0;
+
+    pointer-events:none;
+
+    border-radius:50%;
+
+    background:
+    radial-gradient(circle,
+
+    rgba(0,212,255,.16),
+
+    rgba(0,212,255,.08),
+
+    transparent 72%);
+
+    transform:
+    translate(-50%,-50%);
+
+    z-index:-1;
+
+    transition:
+    transform .08s linear;
+
+    mix-blend-mode:screen;
+
+}
