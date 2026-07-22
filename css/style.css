@@ -1693,3 +1693,114 @@ footer hr{
     z-index:-1;
 
 }
+
+
+/********************************************/
+/* FLOATING CLOUD PLATFORM */
+/********************************************/
+
+.cloud-platform{
+
+    width:min(1400px,90%);
+
+    margin:120px auto;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    flex-wrap:wrap;
+
+    gap:35px;
+
+}
+
+.cloud-card{
+
+    position:relative;
+
+    padding:22px 42px;
+
+    min-width:190px;
+
+    text-align:center;
+
+    color:white;
+
+    font-size:20px;
+
+    font-weight:700;
+
+    letter-spacing:.5px;
+
+    border-radius:999px;
+
+    background:
+
+        linear-gradient(
+            180deg,
+            rgba(255,255,255,.12),
+            rgba(255,255,255,.05)
+        );
+
+    backdrop-filter:blur(28px);
+
+    border:1px solid rgba(255,255,255,.12);
+
+    box-shadow:
+
+        0 18px 40px rgba(0,0,0,.30),
+
+        0 0 25px rgba(0,212,255,.10);
+
+    transition:.4s;
+
+    animation:cloudFloat 7s ease-in-out infinite;
+
+}
+
+.cloud-card:nth-child(2){animation-delay:.5s;}
+.cloud-card:nth-child(3){animation-delay:1s;}
+.cloud-card:nth-child(4){animation-delay:1.5s;}
+.cloud-card:nth-child(5){animation-delay:2s;}
+.cloud-card:nth-child(6){animation-delay:2.5s;}
+.cloud-card:nth-child(7){animation-delay:3s;}
+.cloud-card:nth-child(8){animation-delay:3.5s;}
+.cloud-card:nth-child(9){animation-delay:4s;}
+.cloud-card:nth-child(10){animation-delay:4.5s;}
+.cloud-card:nth-child(11){animation-delay:5s;}
+.cloud-card:nth-child(12){animation-delay:5.5s;}
+
+.cloud-card:hover{
+
+    transform:
+
+        translateY(-10px)
+
+        scale(1.08);
+
+    border-color:rgba(0,212,255,.45);
+
+    box-shadow:
+
+        0 0 35px rgba(0,212,255,.35);
+
+}
+
+@keyframes cloudFloat{
+
+    0%,100%{
+
+        transform:translateY(0px);
+
+    }
+
+    50%{
+
+        transform:translateY(-12px);
+
+    }
+
+}
