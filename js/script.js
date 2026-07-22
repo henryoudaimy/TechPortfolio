@@ -270,20 +270,15 @@ document.querySelectorAll(".tech").forEach(card=>{
         card.style.setProperty("--rotateX",rotateX+"deg");
         card.style.setProperty("--rotateY",rotateY+"deg");
 
-        card.style.transform=
-
-            `perspective(1200px)
-             translate(${moveX}px,${moveY}px)
-             rotateX(${rotateX}deg)
-             rotateY(${rotateY}deg)
-             scale(1.03)`;
+        card.style.setProperty("--moveX", moveX + "px");
+        card.style.setProperty("--moveY", moveY + "px");
 
     });
 
     card.addEventListener("mouseleave",()=>{
 
-        card.style.transform=
-            "perspective(1200px) rotateX(0deg) rotateY(0deg)";
+        card.style.setProperty("--moveX","0px");
+        card.style.setProperty("--moveY","0px");
 
     });
 
