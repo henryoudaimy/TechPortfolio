@@ -896,45 +896,8 @@ section>p{
 
 }
 
-.tech .logoGlow{
 
-    position:absolute;
 
-    width:90px;
-
-    height:90px;
-
-    border-radius:50%;
-
-    background:
-
-        radial-gradient(
-
-            circle,
-
-            rgba(0,212,255,.45),
-
-            transparent 70%
-
-        );
-
-    filter:blur(22px);
-
-    opacity:0;
-
-    transition:.35s;
-
-    pointer-events:none;
-
-}
-
-.tech:hover .logoGlow{
-
-    opacity:1;
-
-    transform:scale(1.4);
-
-}
 
 .tech{
 
@@ -942,77 +905,6 @@ section>p{
 
 }
 
-.techBorder{
-
-    position:absolute;
-
-    inset:-1px;
-
-    border-radius:26px;
-
-    padding:1px;
-
-    background:
-
-        linear-gradient(
-
-            90deg,
-
-            #00d4ff,
-
-            #00ffb7,
-
-            #6a7dff,
-
-            #00d4ff
-
-        );
-
-    background-size:300%;
-
-    animation:borderMove 8s linear infinite;
-
-    opacity:0;
-
-    transition:.3s;
-
-    z-index:0;
-
-    mask:
-        linear-gradient(#fff 0 0) content-box,
-        linear-gradient(#fff 0 0);
-
-    -webkit-mask:
-        linear-gradient(#fff 0 0) content-box,
-        linear-gradient(#fff 0 0);
-
-    -webkit-mask-composite:xor;
-
-    mask-composite:exclude;
-
-}
-
-.tech:hover .techBorder{
-
-    opacity:1;
-
-}
-
-@keyframes borderMove{
-
-    from{
-
-        background-position:0%;
-
-    }
-
-    to{
-
-        background-position:300%;
-
-    }
-
-}
 
 .tech img[alt="Docker"]{
     --logo-scale:1.3;
