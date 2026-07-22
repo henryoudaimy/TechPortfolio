@@ -1268,6 +1268,18 @@ footer{
 
 }
 
+.footer-social img{
+
+    width:24px;
+
+    height:24px;
+
+    object-fit:contain;
+
+    display:block;
+
+}
+
 .footer-social a:hover{
 
     background:rgba(0,212,255,.15);
