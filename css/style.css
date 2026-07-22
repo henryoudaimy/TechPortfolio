@@ -853,7 +853,7 @@ section>p{
 }
 
 .tech img[alt="Docker"]{
-    --logo-scale:2.0;
+    --logo-scale:1.6;
 }
 
 .tech img[alt="Ubuntu"]{
@@ -865,15 +865,23 @@ section>p{
 }
 
 .tech img[alt="Ceph"]{
-    --logo-scale:2.0;
+    --logo-scale:1.5;
 }
 
 .tech img[alt="OpenShift"]{
-    --logo-scale:1.0;
+    --logo-scale:1.4;
 }
 
 .tech img[alt="Ansible"]{
-    --logo-scale:1.0;
+    --logo-scale:1.4;
+}
+
+.tech img[alt="Grafana"]{
+    --logo-scale:1.2;
+}
+
+.tech img[alt="Prometheus"]{
+    --logo-scale:1.2;
 }
 
 .tech:hover img{
