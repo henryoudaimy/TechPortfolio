@@ -249,35 +249,41 @@ window.addEventListener("mousemove",(e)=>{
  Interactive Technology Cards
 ****************************************************/
 
-document.addEventListener("DOMContentLoaded", () => {
+document.querySelectorAll(".tech").forEach(card=>{
 
-    document.querySelectorAll(".tech").forEach(card => {
+    card.addEventListener("mousemove",e=>{
 
-        card.addEventListener("mousemove", e => {
+        const rect=card.getBoundingClientRect();
 
-            console.log("mousemove");
+        const x=e.clientX-rect.left;
+        const y=e.clientY-rect.top;
 
-            const rect = card.getBoundingClientRect();
+        const rotateY=((x/rect.width)-0.5)*24;
+        const rotateX=((0.5-y/rect.height))*24;
 
-            const x = e.clientX - rect.left;
-            const y = e.clientY - rect.top;
+        const moveX=((x/rect.width)-0.5)*12;
+        const moveY=((y/rect.height)-0.5)*12;
 
-            const rotateY = ((x / rect.width) - 0.5) * 28;
-            const rotateX = ((0.5 - y / rect.height)) * 28;
+        card.style.setProperty("--x",x+"px");
+        card.style.setProperty("--y",y+"px");
 
-            card.style.setProperty("--x", x + "px");
-            card.style.setProperty("--y", y + "px");
-            card.style.setProperty("--rotateX", rotateX + "deg");
-            card.style.setProperty("--rotateY", rotateY + "deg");
+        card.style.setProperty("--rotateX",rotateX+"deg");
+        card.style.setProperty("--rotateY",rotateY+"deg");
 
-        });
+        card.style.transform=
 
-        card.addEventListener("mouseleave", () => {
+            `perspective(1200px)
+             translate(${moveX}px,${moveY}px)
+             rotateX(${rotateX}deg)
+             rotateY(${rotateY}deg)
+             scale(1.03)`;
 
-            card.style.setProperty("--rotateX", "0deg");
-            card.style.setProperty("--rotateY", "0deg");
+    });
 
-        });
+    card.addEventListener("mouseleave",()=>{
+
+        card.style.transform=
+            "perspective(1200px) rotateX(0deg) rotateY(0deg)";
 
     });
 
