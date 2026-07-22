@@ -827,18 +827,20 @@ section>p{
 .tech{
 
     --logo-scale:1;
+    --logo-hover:1;
 
 }
 
 .tech img{
 
     width:130px;
-
     height:130px;
 
     object-fit:contain;
 
-    transform:scale(var(--logo-scale));
+    transform:
+        translateZ(35px)
+        scale(calc(var(--logo-scale) * var(--logo-hover)));
 
     transition:
         transform .35s ease,
@@ -853,36 +855,35 @@ section>p{
 }
 
 .tech img[alt="Docker"]{
-    --logo-scale:1.8;
+    --logo-scale:2.8;
 }
 
 .tech img[alt="Ubuntu"]{
-    --logo-scale:2.0;
+    --logo-scale:2.5;
 }
 
 .tech img[alt="OpenShift"]{
-    --logo-scale:1.8;
+    --logo-scale:1.75;
 }
 
 .tech img[alt="PostgreSQL"]{
-    --logo-scale:2.0;
+    --logo-scale:2.4;
 }
 
 .tech img[alt="Ceph"]{
-    --logo-scale:1.9;
+    --logo-scale:2.4;
 }
 
 .tech img[alt="Ansible"]{
-    --logo-scale:1.8;
+    --logo-scale:1.75;
 }
 
 .tech:hover img{
 
-    transform:
-        scale(calc(var(--logo-scale) * 1.08));
+    --logo-hover:1.08;
 
     filter:
-        drop-shadow(0 0 12px rgba(255,255,255,.35));
+        drop-shadow(0 0 18px rgba(255,255,255,.45));
 
 }
 
