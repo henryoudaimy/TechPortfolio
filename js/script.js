@@ -230,3 +230,17 @@ window.addEventListener("load",()=>{
     },250);
 
 });
+
+/***************************************************
+ Mouse Spotlight
+***************************************************/
+
+const spotlight=document.getElementById("spotlight");
+
+window.addEventListener("mousemove",(e)=>{
+
+    spotlight.style.left=e.clientX+"px";
+
+    spotlight.style.top=e.clientY+"px";
+
+});
