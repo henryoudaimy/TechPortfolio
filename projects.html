@@ -1,61 +1,72 @@
 <!DOCTYPE html>
+<html lang="en">
 
-<html>
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Projects | Henry Tech Solutions</title>
+
+    <link rel="stylesheet" href="css/style.css">
+
+    <script defer src="js/script.js"></script>
+
+</head>
 
 <body>
 
-<h1>Projects</h1>
+    <div id="spotlight"></div>
 
-<div class="cards">
+    <video autoplay muted loop playsinline id="background-video">
+        <source src="videos/projects.mp4" type="video/mp4">
+    </video>
 
-<div class="card">
+    <div class="overlay"></div>
+    <div class="aurora"></div>
 
-<h2>Enterprise Kubernetes Platform</h2>
+    <section class="services">
 
-<p>
+        <div class="cards">
 
-Designed production-grade Kubernetes clusters
-using Canonical Kubernetes,
-Ceph,
-HAProxy,
-MetalLB
-and PostgreSQL.
+            <div class="card">
 
-</p>
+                <h3>Enterprise Kubernetes Platform</h3>
 
-</div>
+                <p>
+                    Designed production-grade Kubernetes clusters using
+                    Canonical Kubernetes, Ceph, HAProxy, MetalLB,
+                    and PostgreSQL.
+                </p>
 
-<div class="card">
+            </div>
 
-<h2>Canonical MAAS</h2>
+            <div class="card">
 
-<p>
+                <h3>Canonical MAAS Platform</h3>
 
-Automated bare-metal provisioning
-with HA architecture
-and Juju integration.
+                <p>
+                    Automated bare-metal provisioning with highly available
+                    MAAS, Juju integration, LXD, and enterprise networking.
+                </p>
 
-</p>
+            </div>
 
-</div>
+            <div class="card">
 
-<div class="card">
+                <h3>High Availability GitLab</h3>
 
-<h2>GitLab Platform</h2>
+                <p>
+                    Designed GitLab infrastructure with PostgreSQL,
+                    Redis, object storage, CI/CD pipelines,
+                    and automated backups.
+                </p>
 
-<p>
+            </div>
 
-High availability GitLab,
-PostgreSQL,
-Redis,
-CI/CD
-and object storage.
+        </div>
 
-</p>
-
-</div>
-
-</div>
+    </section>
 
 </body>
 
