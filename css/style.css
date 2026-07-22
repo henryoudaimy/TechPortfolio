@@ -880,21 +880,11 @@ section>p{
 
 }
 
-.tech:hover{
+.tech:hover img{
 
-    transform:
-        translateY(-12px)
-        scale(1.05);
+    transform:scale(1.08);
 
-    border-color:rgba(0,212,255,.85);
-
-    box-shadow:
-
-        0 0 15px rgba(0,212,255,.55),
-
-        0 0 35px rgba(0,212,255,.35),
-
-        inset 0 0 18px rgba(255,255,255,.06);
+    filter:drop-shadow(0 0 12px rgba(255,255,255,.35));
 
 }
 
