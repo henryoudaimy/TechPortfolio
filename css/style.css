@@ -59,28 +59,23 @@ body::before{
 nav{
 
     position:fixed;
+    top:0;
+    left:0;
 
     width:100%;
 
-    top:0;
-
-    left:0;
-
     display:flex;
-
     justify-content:space-between;
-
     align-items:center;
 
     padding:22px 60px;
 
-    background:rgba(0,0,0,.20);
+    background:transparent;
 
-    backdrop-filter:blur(15px);
+    backdrop-filter:none;
+    -webkit-backdrop-filter:none;
 
-    border-bottom:1px solid rgba(255,255,255,.1);
-
-    z-index:1000;
+    border-bottom:none;
 
 }
 
@@ -214,16 +209,13 @@ nav a:hover::after{
     min-height:100vh;
 
     display:flex;
-
     flex-direction:column;
-
     justify-content:center;
-
     align-items:center;
 
     text-align:center;
 
-    padding:0 20px;
+    padding:140px 20px 40px;
 
 }
 
