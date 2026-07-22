@@ -732,12 +732,17 @@ section>p{
 
 .tech{
 
+    --rotateX:0deg;
+    --rotateY:0deg;
+    --x:50%;
+    --y:50%;
+
+    --logo-scale:1;
+    --logo-hover:1;
+
     position:relative;
-
     display:flex;
-
     justify-content:center;
-
     align-items:center;
 
     height:220px;
@@ -748,18 +753,16 @@ section>p{
 
     text-decoration:none;
 
-    background:rgba(255,255,255,.04);
+    background:rgba(255,255,255,.06);
 
     backdrop-filter:blur(20px);
 
-    -webkit-backdrop-filter:blur(20px);
-
-    border:1px solid rgba(255,255,255,.08);
+    border:1px solid rgba(255,255,255,.12);
 
     transition:
-        transform .35s ease,
-        border-color .35s ease,
-        box-shadow .35s ease;
+        transform .25s ease,
+        border-color .25s ease,
+        box-shadow .25s ease;
 
     transform-style:preserve-3d;
 
@@ -796,24 +799,28 @@ section>p{
 
 }
 
+.tech{
+
+    transform:
+        perspective(1100px)
+        rotateX(var(--rotateX))
+        rotateY(var(--rotateY));
+
+}
+
 .tech:hover{
 
     transform:
-
-        perspective(900px)
-
+        perspective(1100px)
         rotateX(var(--rotateX))
-
         rotateY(var(--rotateY))
-
-        translateY(-8px);
+        translateY(-12px)
+        scale(1.03);
 
     border-color:#00d4ff;
 
     box-shadow:
-
         0 0 18px rgba(0,212,255,.45),
-
         0 0 45px rgba(0,212,255,.18);
 
 }
@@ -821,13 +828,6 @@ section>p{
 .tech:hover::before{
 
     opacity:1;
-
-}
-
-.tech{
-
-    --logo-scale:1;
-    --logo-hover:1;
 
 }
 
@@ -846,8 +846,6 @@ section>p{
         transform .35s ease,
         filter .35s ease;
 
-    animation:floatingLogo 6s ease-in-out infinite;
-
     pointer-events:none;
 
     z-index:2;
@@ -855,27 +853,27 @@ section>p{
 }
 
 .tech img[alt="Docker"]{
-    --logo-scale:2.8;
+    --logo-scale:3.2;
 }
 
 .tech img[alt="Ubuntu"]{
-    --logo-scale:2.5;
-}
-
-.tech img[alt="OpenShift"]{
-    --logo-scale:1.75;
+    --logo-scale:3.0;
 }
 
 .tech img[alt="PostgreSQL"]{
-    --logo-scale:2.4;
+    --logo-scale:2.9;
 }
 
 .tech img[alt="Ceph"]{
-    --logo-scale:2.4;
+    --logo-scale:2.9;
+}
+
+.tech img[alt="OpenShift"]{
+    --logo-scale:2.0;
 }
 
 .tech img[alt="Ansible"]{
-    --logo-scale:1.75;
+    --logo-scale:2.0;
 }
 
 .tech:hover img{
@@ -1246,49 +1244,6 @@ footer{
 .tech:nth-child(11) img{
 
     animation-delay:5s;
-
-}
-
-/*==================================================
-  FLOAT ANIMATION
-==================================================*/
-
-@keyframes floatingLogo{
-
-    0%{
-
-        transform:
-        translateY(0px);
-
-    }
-
-    25%{
-
-        transform:
-        translateY(-8px);
-
-    }
-
-    50%{
-
-        transform:
-        translateY(0px);
-
-    }
-
-    75%{
-
-        transform:
-        translateY(6px);
-
-    }
-
-    100%{
-
-        transform:
-        translateY(0px);
-
-    }
 
 }
 
