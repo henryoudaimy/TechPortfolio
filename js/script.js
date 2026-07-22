@@ -1,53 +1,232 @@
-// Fade in cards
+/*==================================================
+    Henry Tech Solutions
+    Enterprise Theme V2
+==================================================*/
 
-const cards=document.querySelectorAll(".card");
+/***************************************************
+ * Typing Animation
+ ***************************************************/
 
-const observer=new IntersectionObserver(entries=>{
+const words = [
+    "Deploy.",
+    "Automate.",
+    "Scale.",
+    "Secure.",
+    "Modernize.",
+    "Monitor.",
+    "Innovate."
+];
 
-entries.forEach(entry=>{
+const typingElement = document.getElementById("typing");
 
-if(entry.isIntersecting){
+let wordIndex = 0;
+let letterIndex = 0;
+let deleting = false;
 
-entry.target.style.opacity=1;
+function typeEffect(){
 
-entry.target.style.transform="translateY(0px)";
+    const currentWord = words[wordIndex];
+
+    if(!deleting){
+
+        typingElement.textContent =
+            currentWord.substring(0, letterIndex);
+
+        letterIndex++;
+
+        if(letterIndex > currentWord.length){
+
+            deleting = true;
+
+            setTimeout(typeEffect,1200);
+
+            return;
+
+        }
+
+    }else{
+
+        typingElement.textContent =
+            currentWord.substring(0, letterIndex);
+
+        letterIndex--;
+
+        if(letterIndex < 0){
+
+            deleting = false;
+
+            wordIndex++;
+
+            if(wordIndex >= words.length){
+
+                wordIndex = 0;
+
+            }
+
+        }
+
+    }
+
+    setTimeout(typeEffect,deleting ? 45 : 100);
 
 }
 
+typeEffect();
+
+/***************************************************
+ * Animated Counters
+ ***************************************************/
+
+const counters = document.querySelectorAll(".counter");
+
+const observerCounter = new IntersectionObserver(entries=>{
+
+    entries.forEach(entry=>{
+
+        if(entry.isIntersecting){
+
+            const counter = entry.target;
+
+            const target = +counter.dataset.target;
+
+            let count = 0;
+
+            const speed = target/120;
+
+            function update(){
+
+                count += speed;
+
+                if(count < target){
+
+                    counter.innerHTML = Math.floor(count);
+
+                    requestAnimationFrame(update);
+
+                }else{
+
+                    counter.innerHTML = target;
+
+                }
+
+            }
+
+            update();
+
+            observerCounter.unobserve(counter);
+
+        }
+
+    });
+
+},{
+    threshold:.5
 });
 
-});
+counters.forEach(counter=>{
 
-cards.forEach(card=>{
-
-card.style.opacity=0;
-
-card.style.transform="translateY(60px)";
-
-card.style.transition="1s";
-
-observer.observe(card);
+    observerCounter.observe(counter);
 
 });
 
-// Smooth scrolling
+/***************************************************
+ * Scroll Reveal
+ ***************************************************/
 
-document.querySelectorAll("a").forEach(anchor=>{
+const revealElements=document.querySelectorAll(
+".stat-card,.tech,.card,.cta,.technologies,.services"
+);
 
-anchor.addEventListener("click",function(e){
+revealElements.forEach(el=>{
 
-if(this.hash!==""){
-
-e.preventDefault();
-
-document.querySelector(this.hash)?.scrollIntoView({
-
-behavior:"smooth"
+    el.classList.add("reveal");
 
 });
 
-}
+const revealObserver=new IntersectionObserver(entries=>{
+
+    entries.forEach(entry=>{
+
+        if(entry.isIntersecting){
+
+            entry.target.classList.add("active");
+
+        }
+
+    });
+
+},{
+    threshold:.15
+});
+
+revealElements.forEach(el=>{
+
+    revealObserver.observe(el);
 
 });
+
+/***************************************************
+ * Navbar Shrink
+ ***************************************************/
+
+const nav=document.querySelector("nav");
+
+window.addEventListener("scroll",()=>{
+
+    if(window.scrollY>80){
+
+        nav.classList.add("scrolled");
+
+    }else{
+
+        nav.classList.remove("scrolled");
+
+    }
+
+});
+
+/***************************************************
+ * Smooth Anchor Links
+ ***************************************************/
+
+document.querySelectorAll('a[href^="#"]').forEach(anchor=>{
+
+    anchor.addEventListener("click",function(e){
+
+        e.preventDefault();
+
+        document.querySelector(this.getAttribute("href"))
+        .scrollIntoView({
+
+            behavior:"smooth"
+
+        });
+
+    });
+
+});
+
+/***************************************************
+ * Hero Fade
+ ***************************************************/
+
+window.addEventListener("load",()=>{
+
+    document.querySelector(".hero-content").style.opacity=0;
+
+    document.querySelector(".hero-content").style.transform=
+    "translateY(30px)";
+
+    setTimeout(()=>{
+
+        document.querySelector(".hero-content").style.transition=
+        "1s";
+
+        document.querySelector(".hero-content").style.opacity=1;
+
+        document.querySelector(".hero-content").style.transform=
+        "translateY(0)";
+
+    },250);
 
 });
