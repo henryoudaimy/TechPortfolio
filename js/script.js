@@ -277,9 +277,12 @@ document.querySelectorAll(".tech").forEach(card=>{
 
     card.addEventListener("mouseleave",()=>{
 
-        card.style.setProperty("--moveX","0px");
-        card.style.setProperty("--moveY","0px");
+    card.style.setProperty("--moveX","0px");
+    card.style.setProperty("--moveY","0px");
 
-    });
+    card.style.setProperty("--rotateX","0deg");
+    card.style.setProperty("--rotateY","0deg");
+
+});
 
 });
