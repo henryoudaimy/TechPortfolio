@@ -734,6 +734,8 @@ section>p{
 
     --rotateX:0deg;
     --rotateY:0deg;
+    --moveX:0px;
+    --moveY:0px;
     --x:50%;
     --y:50%;
 
@@ -845,26 +847,22 @@ section>p{
 .tech{
 
     transform:
-        perspective(1100px)
+        perspective(1200px)
+        translate(var(--moveX), var(--moveY))
         rotateX(var(--rotateX))
         rotateY(var(--rotateY));
-
-}
 
 .tech:hover{
 
     transform:
-        perspective(1100px)
+        perspective(1200px)
+        translate(
+            var(--moveX),
+            calc(var(--moveY) - 12px)
+        )
         rotateX(var(--rotateX))
         rotateY(var(--rotateY))
-        translateY(-12px)
         scale(1.03);
-
-    border-color:#00d4ff;
-
-    box-shadow:
-        0 0 18px rgba(0,212,255,.45),
-        0 0 45px rgba(0,212,255,.18);
 
 }
 
